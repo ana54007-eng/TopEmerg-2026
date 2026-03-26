@@ -1,0 +1,679 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.body_cadastro {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.titulos_index {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #66ea80;
+}
+
+.titulo_1index {
+    font-size: 2.5rem;
+    color: #4a684a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #6fea66 0%, #54a24b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.titulo_2index {
+    font-size: 1.5rem;
+    color: #729671;
+    font-weight: 500;
+}
+
+
+.div_form_index {
+    background: #f7fafc;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.6s ease-out;
+}
+
+.form_index {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.label_nome,
+.label_endereco,
+.label_telefone {
+    font-weight: 600;
+    color: #5a795f;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.label_nome:hover,
+.label_endereco:hover,
+.label_telefone:hover {
+    color: #6fea66;
+}
+
+.input_nome,
+.input_endereco,
+.input_telefone {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    font-family: inherit;
+}
+
+.input_nome:focus,
+.input_endereco:focus,
+.input_telefone:focus {
+    outline: none;
+    border-color: #66ea6d;
+    box-shadow: 0 0 0 3px rgba(2, 144, 0, 0.727);
+    transform: translateY(-2px);
+}
+
+.input_nome::placeholder,
+.input_endereco::placeholder,
+.input_telefone::placeholder {
+    color: #cbd5e0;
+    font-size: 0.9rem;
+}
+
+
+.submit_cadastro {
+    background: linear-gradient(135deg, #66ea9d 0%, #4fa24b 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit_cadastro:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.submit_cadastro:active {
+    transform: translateY(0);
+}
+
+
+.contatos-lista {
+    margin-top: 40px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.contatos-lista h3 {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.contato-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contato-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left-color: #764ba2;
+}
+
+.contato-info {
+    flex: 1;
+}
+
+.contato-nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.contato-endereco {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 3px;
+}
+
+.contato-telefone {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.contato-acoes {
+    display: flex;
+    gap: 10px;
+}
+
+
+.btn-editar, .btn-excluir {
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-editar {
+    background: #48bb78;
+    color: white;
+}
+
+.btn-editar:hover {
+    background: #38a169;
+    transform: scale(1.05);
+}
+
+.btn-excluir {
+    background: #f56565;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background: #e53e3e;
+    transform: scale(1.05);
+}
+
+
+.no-contatos {
+    text-align: center;
+    padding: 40px;
+    background: #fef5e7;
+    border-radius: 12px;
+    color: #ed8936;
+    font-size: 1.1rem;
+    border: 2px dashed #ed8936;
+}
+
+
+@media (max-width: 768px) {
+    .body_cadastro {
+        padding: 15px;
+    }
+    
+    .titulo_1index {
+        font-size: 1.8rem;
+    }
+    
+    .titulo_2index {
+        font-size: 1.2rem;
+    }
+    
+    .div_form_index {
+        padding: 20px;
+    }
+    
+    .contato-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .contato-acoes {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-editar, .btn-excluir {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo_1index {
+        font-size: 1.4rem;
+    }
+    
+    .submit_cadastro {
+        padding: 10px 20px;
+    }
+    
+    .input_nome,
+    .input_endereco,
+    .input_telefone {
+        padding: 10px 12px;
+    }
+}
+
+
+a[href*="atualizar.php"] {
+    background: #48bb78;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+a[href*="atualizar.php"]:hover {
+    background: #38a169;
+    transform: scale(1.05);
+}
+
+a[href*="excluir.php"] {
+    background: #f56565;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+a[href*="excluir.php"]:hover {
+    background: #e53e3e;
+    transform: scale(1.05);
+}
+
+
+.submit_cadastro:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #7cea66 0%, #20711a 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #6fa24b 0%, #75ea66 100%);
+}
+
+.tabela_contatos {
+    margin-top: 40px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.titulo_tabela {
+    font-size: 1.8rem;
+        color: #729671;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.titulo_tabela:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #6fea66 0%, #54a24b 100%);
+    border-radius: 3px;
+}
+
+.tabela {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+
+.tabela thead tr {
+    background: linear-gradient(135deg, #6fea66 0%, #54a24b 100%);
+    color: white;
+}
+
+.tabela th {
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.tabela th:first-child {
+    border-top-left-radius: 15px;
+}
+
+.tabela th:last-child {
+    border-top-right-radius: 15px;
+}
+
+
+.tabela tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabela tbody tr:hover {
+    background: #f7fafc;
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tabela td {
+    padding: 15px 20px;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.col-id {
+    font-weight: 600;
+    color: #667eea;
+    width: 60px;
+}
+
+.col-nome {
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.col-endereco {
+    color: #718096;
+}
+
+.col-telefone {
+    color: #718096;
+    font-family: monospace;
+    font-size: 0.95rem;
+}
+
+.col-acoes {
+    white-space: nowrap;
+    width: 180px;
+}
+
+
+.tabela .btn-editar,
+.tabela .btn-excluir {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+}
+
+.tabela .btn-editar i,
+.tabela .btn-excluir i {
+    font-size: 0.85rem;
+}
+
+.tabela .btn-editar:hover,
+.tabela .btn-excluir:hover {
+    transform: translateY(-2px);
+}
+
+.no-contatos {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #fef5e7 0%, #fff9f0 100%);
+    border-radius: 15px;
+    color: #ed8936;
+    font-size: 1.1rem;
+    border: 2px dashed #ed8936;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.no-contatos i {
+    font-size: 4rem;
+    color: #ed8936;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.no-contatos p {
+    margin: 10px 0;
+}
+
+.no-contatos .sub-mensagem {
+    font-size: 0.9rem;
+    color: #a0aec0;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .tabela {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tabela th,
+    .tabela td {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .col-acoes {
+        white-space: nowrap;
+    }
+    
+    .tabela .btn-editar,
+    .tabela .btn-excluir {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .titulo_tabela {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabela th,
+    .tabela td {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .col-acoes {
+        width: 140px;
+    }
+    
+    .tabela .btn-editar,
+    .tabela .btn-excluir {
+        padding: 3px 6px;
+        font-size: 0.7rem;
+    }
+    
+    .no-contatos {
+        padding: 40px 20px;
+    }
+    
+    .no-contatos i {
+        font-size: 3rem;
+    }
+}
+
+
+.tabela tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.tabela tbody tr:nth-child(even):hover {
+    background-color: #f7fafc;
+}
+
+a[href*="atualizar.php"]:not(.btn-editar),
+a[href*="excluir.php"]:not(.btn-excluir) {
+    background: #48bb78;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+a[href*="atualizar.php"]:not(.btn-editar):hover {
+    background: #38a169;
+    transform: scale(1.05);
+}
+
+a[href*="excluir.php"]:not(.btn-excluir) {
+    background: #f56565;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+a[href*="excluir.php"]:not(.btn-excluir):hover {
+    background: #e53e3e;
+    transform: scale(1.05);
+
+
+}
+
+.mensagem-sucesso,
+.mensagem-erro {
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.mensagem-sucesso {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+}
+
+.mensagem-erro {
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+    color: white;
+}
+
+.mensagem-sucesso i,
+.mensagem-erro i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+    background-color: #2d3748;
+}
+
+.mensagem-sucesso h2,
+.mensagem-erro h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background: white;
+    color: #4a5568;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
